@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div id="login-form">
+                <h2>Login</h2>
+                <form onsubmit="login(event)">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" required>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div id="register-form" style="display: none;">
+                <h2>Signup</h2>
+                <form onsubmit="register(event)">
+                    <label for="registerUsername">Username:</label>
+                    <input type="text" id="registerUsername" required>
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" required>
+                    <button type="submit">Signup</button>
+                </form>
+            </div>
+        </div>
+        <div class="toggle-btn" onclick="toggleForm()">Switch Form</div>
+        <div id="message" style="display: none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
